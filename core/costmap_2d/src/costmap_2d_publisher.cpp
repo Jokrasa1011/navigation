@@ -91,7 +91,7 @@ void Costmap2DPublisher::onNewSubscription(const ros::SingleSubscriberPublisher&
 // prepare grid_ message for publication.
 void Costmap2DPublisher::prepareGrid()
 {
-  boost::unique_lock<Costmap2D::mutex_t> lock(*(costmap_->getMutex()));
+  //boost::unique_lock<Costmap2D::mutex_t> lock(*(costmap_->getMutex()));
   double resolution = costmap_->getResolution();
 
   grid_.header.frame_id = global_frame_;
